@@ -54,7 +54,7 @@ public class Main {
 //        orange.buyPhone("yellow", "Samsung");
 
         Phone mySecondPhone = orange.buyPhone("Green", "Nokia"); ///
-//        System.out.println(mySecondPhone.color + mySecondPhone.brand + "+");
+        System.out.println(mySecondPhone.color + mySecondPhone.brand + "+");
 
         Phone myPhone1 = new Phone("red", "Sumsong");
         Phone myPhone2 = new Phone("red", "Sumsong");
