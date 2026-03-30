@@ -4,6 +4,8 @@ package org.prog.session4;
 //TODO: Write class PhoneShop where you can buy phone that is not black and iphone
 //TODO: PhoneShop must return phone with requested brand and color
 
+import java.util.Objects;
+
 public class Main {
 
     /**
@@ -52,6 +54,19 @@ public class Main {
 //        orange.buyPhone("yellow", "Samsung");
 
         Phone mySecondPhone = orange.buyPhone("Green", "Nokia"); ///
+//        System.out.println(mySecondPhone.color + mySecondPhone.brand + "+");
+
+        Phone myPhone1 = new Phone("red", "Sumsong");
+        Phone myPhone2 = new Phone("red", "Sumsong");
+        Phone myPhone3 = new Phone(null, null);
+        Phone myPhone4 = new Phone("red", "IDomophone");
+        System.out.println(myPhone1.hashCode());
+        System.out.println(myPhone2.hashCode());
+
+        System.out.println(myPhone1.equals(myPhone2));
+
+        System.out.println(myPhone4.equals(myPhone3));
+        System.out.println(myPhone3.equals(myPhone4));
 
         /// //////////////////////////////////////////////
 

@@ -1,5 +1,7 @@
 package org.prog.session4;
 
+import java.util.Objects;
+
 public class Phone {
 
     public String color;
@@ -20,6 +22,31 @@ public class Phone {
         }
     }
 
+    public boolean equals(Object obj) {
+        if (obj instanceof Phone) {
+            Phone phone = (Phone) obj;
+            try {
+                phone.brand.equals("a");
+                phone.color.equals("a");
+                this.color.equals("a");
+                this.brand.equals("a");
+//                System.out.println(phone.brand.equals("a"));
+//                System.out.println(phone.color.equals("a"));
+//                System.out.println(this.color.equals("a"));
+//                System.out.println(this.brand.equals("a"));
+//                System.out.println("______");
+            } catch (RuntimeException e) {
+                System.out.println("oops, phone has no brand or color!");
+            }
+            return Objects.equals(phone.color, this.color) &&
+                    Objects.equals(phone.brand, this.brand);
+        }
+        return false;
+    }
+
+    public int hashCode() {
+        return Objects.hashCode(color + brand);
+    }
 
 }
 
