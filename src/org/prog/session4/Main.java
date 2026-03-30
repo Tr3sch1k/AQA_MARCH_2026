@@ -4,7 +4,7 @@ package org.prog.session4;
 //TODO: Write class PhoneShop where you can buy phone that is not black and iphone
 //TODO: PhoneShop must return phone with requested brand and color
 
-import java.util.Objects;
+import java.util.*;
 
 public class Main {
 
@@ -68,8 +68,44 @@ public class Main {
         System.out.println(myPhone4.equals(myPhone3));
         System.out.println(myPhone3.equals(myPhone4));
 
+        /// //////////////// HOMEWORK 7 ////////////
+
+        List<String> phone1List = new LinkedList<>();
+        List<String> phone2List = new LinkedList<>();
+        List<String> phone3List = new LinkedList<>();
+        List<String> phone4List = new LinkedList<>();
+
+        Map<Phone, List> mapPhone = new HashMap<>();
+        mapPhone.put(myPhone1, phone1List);
+        mapPhone.put(myPhone2, phone2List);
+        mapPhone.put(myPhone3, phone3List);
+        mapPhone.put(myPhone4, phone4List);
+
+        String[] numberPhone = new String[]{
+                "1111111111",
+                "2222222222",
+                "3333333333",
+                "4444444444",
+                "5555555555"
+        };
+
+        addPhoneNumber(phone1List, numberPhone);
+        addPhoneNumber(phone2List, numberPhone);
+        addPhoneNumber(phone3List, numberPhone);
+        addPhoneNumber(phone4List, numberPhone);
+
+        System.out.println(mapPhone.get(myPhone1).get(0));
+
+
+
         /// //////////////////////////////////////////////
 
+    }
+
+    public static void addPhoneNumber(List list, String[] number) {
+        for (int i = 0; i < number.length; i++) {
+            list.add(number[i]);
+        }
     }
 
     public static void paintCar(Car car, String color) {
