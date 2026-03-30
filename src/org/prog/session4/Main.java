@@ -48,8 +48,10 @@ public class Main {
         PhoneShop orange = new PhoneShop();
         Phone myPhone = new Phone("red", "Sumsong");
         myPhone.ring(myPhone);
-        orange.buyPhone("black", "iphone");
-        orange.buyPhone("yellow", "Samsung");
+//        orange.buyPhone("black", "iphone");
+//        orange.buyPhone("yellow", "Samsung");
+
+        Phone mySecondPhone = orange.buyPhone("Green", "Nokia"); ///
 
         /// //////////////////////////////////////////////
 
