@@ -1,0 +1,53 @@
+package org.prog.homeWork_9;
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+import java.util.List;
+
+public class homeWorkWebTest1 {
+
+    private WebDriver driver;
+
+    @BeforeSuite
+    public void beforeSuite() {
+        driver = new ChromeDriver();
+    }
+
+    @Test
+    public void myWebTest1() throws InterruptedException {
+
+        driver.get("https://www.allo.ua/");
+
+        WebElement searchBox = driver.findElement(By.id("search-form__input"));
+        searchBox.click();
+        searchBox.sendKeys("samsung");
+
+        WebElement submitButton = driver.findElement(By.className("search-form__submit-button"));
+        submitButton.click();
+
+        Thread.sleep(1000);
+
+        List<WebElement> searchSuggestions = driver.findElements(By.className("products-layout__item"));
+        for (WebElement element : searchSuggestions) {
+//            WebElement text = element.findElement(By.className("product-card__title"));
+//            System.out.println(text.getAccessibleName());
+        }
+
+//        Assert.assertTrue(!searchSuggestions.isEmpty(), "Product list = null");
+        Assert.assertTrue(searchSuggestions.get(0).findElement(By.className("product-card__title")).getAccessibleName() != null, "Product list = null");
+
+    }
+
+    @AfterSuite
+    public void afterSuite() {
+        driver.quit();
+    }
+}
