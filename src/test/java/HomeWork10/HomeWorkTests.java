@@ -41,8 +41,9 @@ public class HomeWorkTests {
         page.clickSearchInput();
         page.setSearchValue("samsung");
         page.acceptSearching();
-        page.getId(123);
-//        page.getId(3);
+//        page.getId(123);
+        page.getId(3);
+        page.searchSuggestionIsNotNull();
 
     }
 

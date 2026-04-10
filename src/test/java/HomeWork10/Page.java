@@ -17,7 +17,7 @@ public class Page {
 
     private WebDriver driver;
     private WebDriverWait wait;
-    private List<WebElement> searchSuggestions;
+    public List<WebElement> searchSuggestions;
 
     public Page(WebDriver driver) {
         this.driver = driver;
@@ -73,6 +73,10 @@ public class Page {
             });
         }
 
+    }
+
+    public void searchSuggestionIsNotNull() {
+      Assert.assertTrue(!searchSuggestions.stream().map(WebElement::getText).anyMatch(s-> s.equals(null)));
     }
 
 }
