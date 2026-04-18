@@ -18,7 +18,7 @@ import java.util.List;
 
 //TODO: re-write tests to page object model
 //TODO: Add maximize window
-//TODO: assert not null for "вод товару" for first 3 phones in search (Use Actions)
+//TODO: assert not null for "код товару" for first 3 phones in search (Use Actions)
 //TODO: * - do this using stream()
 
 public class WebTests {

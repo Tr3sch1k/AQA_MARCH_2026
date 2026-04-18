@@ -1,0 +1,31 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Carl",
+        "last": "Jensen"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Jacob",
+        "last": "Andersen"
+      },
+      "nat": "DK"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Gerhardt",
+        "last": "Haubold"
+      },
+      "nat": "DE"
+    }
+  ]
+}
