@@ -7,6 +7,14 @@ CREATE TABLE Persons (
                          Nat varchar(255) NOT NULL
 );
 
+CREATE TABLE Phone (
+                        ProductID varchar(255) NOT NULL,
+                        ProductName varchar(255) NOT NULL,
+                );
+INSERT INTO Phone (ProductID, ProductName) VALUES ('TestProductID', 'TestProductName');
+select * from Phone;
+DELETE from Phone;
+
 
 INSERT INTO Persons (FirstName, LastName, Gender, Title, Nat) VALUES ('Jane', 'Doe', 'female', 'Mrs', 'US');
 
