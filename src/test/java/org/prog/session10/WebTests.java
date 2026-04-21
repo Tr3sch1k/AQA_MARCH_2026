@@ -1,6 +1,7 @@
 package org.prog.session10;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,6 +35,8 @@ public class WebTests {
         option.addArguments("--disable-popup-blocking");
         driver = new ChromeDriver(option);
         googlePage = new GooglePage(driver);
+
+        driver.manage().window().setPosition(new Point(0, 0));
     }
 
     @Test
