@@ -20,7 +20,8 @@ import java.sql.SQLException;
 @CucumberOptions(
         tags = "@all_in_one",
         glue = "org.prog.session15.steps",
-        features = "src/test/resources/features"
+        features = "src/test/resources/features",
+        plugin = {"json:target/Cucumber.json"}
 )
 @Slf4j
 public class CucumberRunner extends AbstractTestNGCucumberTests {

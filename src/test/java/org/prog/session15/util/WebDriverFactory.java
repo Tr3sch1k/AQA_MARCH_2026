@@ -13,7 +13,7 @@ import java.net.URL;
 public class WebDriverFactory {
 
     public static WebDriver getDriver() throws MalformedURLException {
-        String envType = System.getProperty("env-type", "jenkins-chrome");
+        String envType = System.getProperty("env-type", "local-chrome");
         switch (envType) {
             case "local-chrome":
                 return new ChromeDriver();

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnectionFactory {
 
     public static Connection getConnection() throws SQLException {
-        String envType = System.getProperty("env-type", "jenkins-chrome");
+        String envType = System.getProperty("env-type", "local-chrome");
         switch (envType) {
             case "jenkins-firefox", "jenkins-chrome":
                 return DriverManager.getConnection(
