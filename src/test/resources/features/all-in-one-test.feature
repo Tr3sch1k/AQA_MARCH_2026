@@ -1,5 +1,6 @@
 Feature: test REST + DB + WEB
 
+  @all_in_one
   Scenario: All in one test
     Given I request 3 random people from randomuser.me API as "group_1"
     When I store "group_1" to "Persons" table
@@ -9,7 +10,6 @@ Feature: test REST + DB + WEB
     When I set search value to "random_user_1" First and Last name
     Then Search input is not empty
 
-  @all_in_one
   Scenario: All in one test
     Given I request 3 random people from randomuser.me API as "group_1"
     When I store "group_1" to "Persons" table
